@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    grid-template-rows: 2fr 2fr; /* Duas linhas */
+    gap: 2px; /* Espaçamento entre os itens da grade */
+    padding: 2px;
+  }
+
+  .item {
+    background-color: #f0f0f0;
+    padding: 2px;
+    border: 1px solid #ccc;
+  }
+
+  .row-span-2 {
+    grid-row: span 2; /* Ocupa duas linhas */
+  }
+</style>
+<title>Exemplo de Grade</title>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item">
+      <iframe width="600" height="275" src="http://192.168.0.180/cgi-bin/mjpg/video.cgi?channel=1&subtype=1" title="CAM1"></iframe>
+    </div>
+    <div class="item row-span-2">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ABVQXgr2LW4" title="SBT Ao Vivo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="item">
+      <iframe width="600" height="275" src="http://192.168.0.182/cgi-bin/mjpg/video.cgi?channel=1&subtype=1" title="CAM2"></iframe>
+    </div>
+  </div>
+</body>
+</html>
